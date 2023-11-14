@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "/myFlix-Angular-app/",
             "outputPath": "dist/my-flix-angular-app",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -100,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "15466b24-931e-4372-b6f7-98dbebd2b3d3"
   }
 }
