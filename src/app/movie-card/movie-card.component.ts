@@ -74,8 +74,8 @@ export class MovieCardComponent {
     });
   }
 
-  addFavorite(id: string): void {
-    this.fetchApiData.addFavoriteMovie(id).subscribe((result) => {
+  addFavorite($id: string): void {
+    this.fetchApiData.addFavoriteMovie($id).subscribe((result) => {
 
       this.snackBar.open('Movie added to favorites.', 'OK', {
         duration: 2000
@@ -90,12 +90,12 @@ export class MovieCardComponent {
    * @example isFavorite()
    * @example removeFavorite()
    */
-  isFavorite(id: string): boolean {
-    return this.fetchApiData.isFavoriteMovie(id);
+  isFavorite($id: string): boolean {
+    return this.fetchApiData.isFavoriteMovie($id);
   }
 
-  removeFavorite(id: string): void {
-    this.fetchApiData.deleteFavoriteMovie(id).subscribe((result) => {
+  removeFavorite($id: string): void {
+    this.fetchApiData.deleteFavoriteMovie($id).subscribe((result) => {
       this.snackBar.open('Movie removed from favorites.', 'OK', {
         duration: 2000
       });
